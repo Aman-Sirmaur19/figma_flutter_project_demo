@@ -47,26 +47,46 @@ class MyHomePage extends StatelessWidget {
         body: TabBarView(
           children: <Widget>[
             Container(
-                child: TextField(
-              decoration: InputDecoration(
-                hintText: "Phone Number",
-              ),
+                child: Column(
+              children: [
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Phone Number",
+                  ),
+                ),
+                Container(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      print("Next");
+                    },
+                    child: Text("Next"),
+                  ),
+                ),
+              ],
             )),
             Container(
                 child: Column(
-                  children: [
-                    TextField(
-                      decoration: InputDecoration(
-                        hintText: "Email",
-                      ),
-                    ),
-                    TextField(
-                      decoration: InputDecoration(
-                        hintText: "Password",
-                      ),
-                    ),
-                  ],
-                )),
+              children: [
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Email",
+                  ),
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Password",
+                  ),
+                ),
+                Container(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      print("Next");
+                    },
+                    child: Text("Next"),
+                  ),
+                )
+              ],
+            )),
           ],
         ),
       ),
